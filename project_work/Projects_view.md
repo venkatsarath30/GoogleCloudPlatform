@@ -15,8 +15,6 @@
 
 2. [Qwiklabs analysis video](https://partner.cloudskillsboost.google/course_sessions/717302/video/113393)
 
-3. [Youtube analysis video](https://www.youtube.com/watch?v=tSTDaMV8ZFc)
-
 ### Company overview
 
 Saas, leading provider of electronic health record software to the medical industry.

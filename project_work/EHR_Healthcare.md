@@ -3,7 +3,8 @@ Of course. Here are the `gcloud` commands for the EHR Healthcare case study, org
 ***
 
 ![image](https://github.com/user-attachments/assets/4eac1596-318f-4bd4-807a-9d06466d7eca)
-![image](https://github.com/user-attachments/assets/4eac1596-318f-4bd4-807a-9d06466d7eca)
+
+```bash
 
 Existing technical environment
 Existing technical environment	GCP service
@@ -29,7 +30,7 @@ Provide consistent logging, log retention, monitoring, and alerting capabilities
 Maintain and manage multiple container-based environments	Artifact registry
 Dynamically scale and provision new environments	fully-managed CI / CD platform: Cloud Build, managed CD to Kubernetes: Cloud Deploy
 Create interfaces to ingest and process data from new providers	Pub / Sub / Dataflow / Cloud Storage
-
+```
 
 ### **Infrastructure Setup & Networking**
 

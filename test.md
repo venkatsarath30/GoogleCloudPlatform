@@ -1,3 +1,17 @@
+To render the **Mermaid HLD diagram** on **GitHub**, follow these steps:
+
+---
+
+## ✅ Step-by-Step: How to Use Mermaid Diagrams on GitHub
+
+### ✅ 1. **Create a Markdown File**
+
+Save the content in a `.md` file (e.g., `cloud_hld.md`):
+
+````markdown
+# High-Level Design Diagram for Cloud Architecture
+
+```mermaid
 graph TD
 
     subgraph "Users & Clients"
@@ -33,7 +47,6 @@ graph TD
         O[Redundancy & Backup]
     end
 
-    %% Flow Connections
     A & B --> C
     C --> D
     D --> E & F
@@ -43,17 +56,40 @@ graph TD
     K --> J
     H & I --> J
 
-    %% Cross-Cutting Impact
     L -.-> E & F & G & H & I & K
     M -.-> E & F & G & H & I & K
     N -.-> E & F & G & H & I & K
     O -.-> E & F & G & H & I & K
+````
 
-    %% Optional: Legend subgraph
-    subgraph Legend [Legend]
-        direction LR
-        L_IAM((IAM))
-        M_MON((Monitoring))
-        N_ENC((Encryption))
-        O_BCK((Backup))
-    end
+``````
+
+> ⚠️ Important: Backticks used above to wrap the Mermaid code block are 3 backticks: ````` before and after the `mermaid` block (replace ` with ```).
+
+---
+
+### ✅ 2. **Commit the `.md` File to GitHub**
+- Push the file to a GitHub repository.
+- Example repo structure:
+``````
+
+my-repo/
+└── cloud\_hld.md
+
+```
+
+---
+
+### ✅ 3. **View in GitHub**
+- Go to your `.md` file in the repository.
+- GitHub **automatically renders Mermaid diagrams** inside Markdown preview (as of early 2023).
+
+---
+
+### 🧪 Tip: Test Before Upload
+Use [https://mermaid.live](https://mermaid.live) to test and preview your diagram before committing it to GitHub.
+
+---
+
+Would you like me to generate a `.md` file for download containing this Mermaid code?
+```

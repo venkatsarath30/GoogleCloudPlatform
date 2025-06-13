@@ -2,6 +2,35 @@ Of course. Here are the `gcloud` commands for the EHR Healthcare case study, org
 
 ***
 
+![image](https://github.com/user-attachments/assets/4eac1596-318f-4bd4-807a-9d06466d7eca)
+![image](https://github.com/user-attachments/assets/4eac1596-318f-4bd4-807a-9d06466d7eca)
+
+Existing technical environment
+Existing technical environment	GCP service
+Customer-facing applications are web-based, and many have recently been containerized to run on a group of Kubernetes clusters	GKE
+Data is stored in a mixture of relational and NoSQL databases (MySQL, MS SQL Server, Redis, and MongoDB)	MySQL / MS SQL Server: Cloud SQL / Cloud Spanner Redis: MemoryStore, MongoDB: Mongo Atlas on Marketplace
+Users are managed via Microsoft Active Directory	Cloud Identity
+Monitoring is currently being done via various open source tools. Alerts are sent via email and are often ignored	Operations
+Business requirements
+Business requirement	GCP service
+Provide a minimum 99.9% availability for all customer-facing systems	HTTP(S) load balancer
+Reduce latency to all customers	Cloud CDN
+Provide centralized visibility and proactive action on system performance and usage	Operations
+Increase ability to provide insights into healthcare trends	BigQuery & ML
+Make predictions and generate reports on industry trends based on provider data	BigQuery & ML
+Maintain regulatory compliance	DLP (Data Loss Protection)
+Decrease infrastructure administration costs	Serverless services & preemptible VMs
+Technical requirements
+Technical requirement	GCP service
+Maintain legacy interfaces to insurance providers with connectivity to both on-premises systems and cloud providers	Apigee
+Provide a consistent way to manage customer-facing applications that are container-based, not enough time to lift and shift all apps on GCP --> kubernetes on prem and GCP: hybrid	Anthos
+Provide a secure and high-performance connection between on-premises systems and Google Cloud	Dedicated interconnect > 10 GB/s otherwise partner interconnect
+Provide consistent logging, log retention, monitoring, and alerting capabilities	Operations
+Maintain and manage multiple container-based environments	Artifact registry
+Dynamically scale and provision new environments	fully-managed CI / CD platform: Cloud Build, managed CD to Kubernetes: Cloud Deploy
+Create interfaces to ingest and process data from new providers	Pub / Sub / Dataflow / Cloud Storage
+
+
 ### **Infrastructure Setup & Networking**
 
 These commands establish the foundational network infrastructure, ensuring secure, high-performance connectivity and low-latency content delivery for the web applications.

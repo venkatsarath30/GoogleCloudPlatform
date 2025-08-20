@@ -1,4 +1,4 @@
-### 🚀 End-to-End Automation: Auto Start & Stop VM (`vm01`) in `rand-369`
+### Automation: Auto Start & Stop VM (`vm01`) in `rand-369`
 
 We’ll use:  
 - **Cloud Scheduler** → triggers **Pub/Sub** → triggers **Cloud Functions (Gen2)** → starts/stops the VM  

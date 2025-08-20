@@ -1,13 +1,4 @@
-setup with your **project ID: `rand-369`**.  
-complete step‑by‑step automation to start / stop **vm01** in **europe-north1-a** at **7:00 AM IST (1:30 AM UTC)** every day.
-
-***
-
-Perfect — let’s do a **fresh complete setup from scratch** for your project **`rand-369`**, fully updated for **Cloud Functions 2nd gen** (default now) with **scheduler and Pub/Sub** to **start your VM at 7 AM IST** and **stop it at 10 PM IST** every day.
-
-***
-
-# 🚀 End-to-End Automation: Auto Start & Stop VM (`vm01`) in `rand-369`
+### 🚀 End-to-End Automation: Auto Start & Stop VM (`vm01`) in `rand-369`
 
 We’ll use:  
 - **Cloud Scheduler** → triggers **Pub/Sub** → triggers **Cloud Functions (Gen2)** → starts/stops the VM  

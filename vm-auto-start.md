@@ -71,9 +71,12 @@ gcloud functions deploy start-vm-function \
   --gen2 \
   --runtime=python310 \
   --region=europe-north1 \
-  --trigger-topic=start-vm-topic \
+  --entry-point=start_vm \
+  --trigger-event=google.cloud.pubsub.topic.v1.messagePublished \
+  --trigger-resource=start-vm-topic \
   --timeout=540s \
   --project=rand-369
+
 ```
 
 ### Stop Function
@@ -82,7 +85,9 @@ gcloud functions deploy stop-vm-function \
   --gen2 \
   --runtime=python310 \
   --region=europe-north1 \
-  --trigger-topic=stop-vm-topic \
+  --entry-point=stop_vm \
+  --trigger-event=google.cloud.pubsub.topic.v1.messagePublished \
+  --trigger-resource=stop-vm-topic \
   --timeout=540s \
   --project=rand-369
 ```
@@ -94,6 +99,17 @@ gcloud functions deploy stop-vm-function \
 ### Start VM at **7:00 AM IST (01:30 UTC)**
 ```bash
 gcloud scheduler jobs create pubsub start-vm-job \
+  --location=europe-north1 \
+  --schedule="30 1 * * *" \
+  --topic=start-vm-topic \
+  --message-body="Start vm01 at 7 AM IST" \
+  --time-zone="UTC" \
+  --project=rand-369
+```
+if you face any issue for above north1 region, try in west1 region
+```bash
+gcloud scheduler jobs create pubsub start-vm-job \
+  --location=europe-west1 \
   --schedule="30 1 * * *" \
   --topic=start-vm-topic \
   --message-body="Start vm01 at 7 AM IST" \

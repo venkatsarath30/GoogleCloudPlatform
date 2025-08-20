@@ -140,6 +140,7 @@ gcloud functions describe stop-vm-function --region=europe-north1 --project=rand
 ### Check Scheduler Jobs
 ```bash
 gcloud scheduler jobs describe start-vm-job --project=rand-369
+gcloud scheduler jobs describe start-vm-job --project=rand-369 --location=europe-west
 gcloud scheduler jobs describe stop-vm-job --project=rand-369
 ```
 
